@@ -9,15 +9,15 @@ const fields: AuthFormField[] = [
   {
     name: 'email',
     type: 'email',
-    label: 'Email',
-    placeholder: 'Enter your email',
+    label: 'Correo Electrónico',
+    placeholder: 'Ingresa tu correo electrónico',
     required: true
   },
   {
     name: 'password',
     type: 'password',
-    label: 'Password',
-    placeholder: 'Enter your password',
+    label: 'Contraseña',
+    placeholder: 'Ingresa tu contraseña',
     required: true
   }
 ]

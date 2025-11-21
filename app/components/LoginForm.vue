@@ -13,24 +13,24 @@ const toast = useToast()
 const fields: AuthFormField[] = [{
   name: 'email',
   type: 'email',
-  label: 'Email',
-  placeholder: 'Enter your email',
+  label: 'Correo Electrónico',
+  placeholder: 'Ingresa tu correo electrónico',
   required: true
 }, {
   name: 'password',
-  label: 'Password',
+  label: 'Contraseña',
   type: 'password',
-  placeholder: 'Enter your password',
+  placeholder: 'Ingresa tu contraseña',
   required: true
 }, {
   name: 'remember',
-  label: 'Remember me',
+  label: 'Recuérdame',
   type: 'checkbox'
 }]
 
 const schema = z.object({
-  email: z.email('Invalid email'),
-  password: z.string('Password is required').min(8, 'Must be at least 8 characters')
+  email: z.string().email('Correo electrónico inválido'),
+  password: z.string().min(8, 'Debe tener al menos 8 caracteres')
 })
   
 type Schema = z.output<typeof schema>
@@ -52,7 +52,8 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
       localStorage.setItem('token', res.token)
     }
 
-    // 🔥 REDIRECCIÓN INMEDIATA
+    // Redirigir a otra página
+    await
     navigateTo('https://google.com', { external: true })
   } catch (err: any) {
     toast.add({
@@ -69,8 +70,8 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
     <UPageCard class="w-full max-w-md">
       <UAuthForm
         :schema="schema"
-        title="Login"
-        description="Enter your credentials to access your account."
+        title="Inicia Sesión"
+        description="Ingresa tus credenciales para acceder a tu cuenta."
         icon="i-lucide-user"
         :fields="fields"
         @submit="onSubmit"

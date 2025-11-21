@@ -71,92 +71,99 @@ features:
       ui:
         leading: bg-accented/50 p-2 rounded-md border border-muted border-dashed
 steps:
-  title: Start coding smarter in [3 steps]{.text-primary}
-  description: Transform your development workflow with our AI-powered assistant.
+  title: Da seguimiento a tu [progreso]{.text-primary} en simples [pasos]{.text-secondary}
+  description: Conoce el estado de tus postulaciones y recibe notificaciones en tiempo real sobre nuevas oportunidades que se ajusten a tu perfil.
   items:
-    - title: Connect Your IDE
-      description: Seamlessly integrate with VS Code, JetBrains, or your preferred editor. Get started in under 2 minutes with zero configuration needed.
+    - title: Conecta con las empresas
+      description: Comunícate directamente con reclutadores y gerentes de contratación para explorar oportunidades que se alineen con tus habilidades e intereses.
       image:
         light: '/images/light/connect.svg'
         dark: '/images/dark/connect.svg'
-    - title: Track & Analyze
-      description: Our AI silently monitors your coding patterns to identify your peak productivity hours and potential workflow bottlenecks.
+    - title: Compara ofertas laborales
+      description: Recibe recomendaciones personalizadas basadas en tus habilidades y preferencias para encontrar las mejores oportunidades laborales.
       image:
         light: '/images/light/optimize.svg'
         dark: '/images/dark/optimize.svg'
-    - title: Optimize & Code Smarter
-      description: Receive personalized recommendations to enhance your coding efficiency. Watch your productivity soar with data-driven insights.
+    - title: Analiza tus habilidades
+      description: Verifica cómo tus habilidades se comparan con las demandas del mercado laboral y recibe sugerencias para mejorar tu perfil profesional.
       image:
         light: '/images/light/track.svg'
         dark: '/images/dark/track.svg'
 pricing:
-  title: Choose your [productivity]{.text-primary} path
-  description: Unlock AI-powered coding efficiency with our flexible plans. Whether you're a solo developer or part of a team, we have the perfect toolset to maximize your development workflow.
+  title: Planes [empresariales]{.text-secondary}
+  description: Desbloquea todo el potencial de la plataforma con nuestras soluciones diseñadas para maximizar la productividad y el enfoque.
   plans:
-    - title: Pro Developer
-      description: Perfect for individual developers focused on maximizing productivity.
-      price: $199
+    - title: Reclutador Básico
+      description: Ideal para pequeñas empresas que buscan talento emergente y desean publicar pocas ofertas de empleo.
+      price: $99 MXN / mes
       features:
-        - AI productivity tracking to optimize your peak coding hours
-        - Smart distraction alerts to maintain deep focus
-        - Personal code snippet library for faster development
-        - Deep Work Mode with Pomodoro timer integration
-        - Performance analytics dashboard
-        - Priority email support
+        - Publica hasta 5 ofertas de empleo
+        - Acceso a la base de datos de candidatos
+        - Herramientas básicas de filtrado y búsqueda
+        - Soporte por correo electrónico
       button:
         label: Buy now
-        color: neutral
-        variant: outline
+        color: secondary
+        variant: subtle
         to: '#'
-    - title: Team Developer
-      description: For bootstrappers and indie hackers.
-      price: $199
+    - title: Reclutador Estrella
+      description: Perfecto para empresas establecidas que buscan optimizar su proceso de contratación.
+      price: $199 MXN / mes
       features:
-        - Everything in Pro Developer
-        - Team productivity analytics and insights
-        - Collaborative code snippet sharing
-        - Cross-team performance tracking
-        - Synchronized deep work sessions
-        - Priority team support with dedicated manager
+        - Publica ofertas de empleo ilimitadas
+        - Acceso completo a la base de datos de candidatos
+        - Herramientas avanzadas de filtrado y búsqueda
+        - Soporte prioritario por correo electrónico y chat en vivo
+        - Integración con sistemas de seguimiento de candidatos (ATS)
+        - Análisis y reportes de contratación
       button:
         label: Buy now
+        color: secondary
         variant: subtle
         to: '#'
 testimonials:
-  title: Join thousands of productive [developers]{.text-primary}
-  description: See how developers are transforming their coding workflow and achieving more with our AI-powered platform.
+  title: Únete a miles de [profesionistas]{.text-secondary} satisfechos
+  description: Descubre cómo PrimerPaso.com ha transformado las carreras de estudiantes y egresados en todo el mundo.
   items:
-    - quote: Since using this tool, my productivity has doubled. The AI insights helped me find my perfect coding rhythm and now I ship features twice as fast.
+    - quote: Desde que me uní a PrimerPaso.com, encontré una pasantía que me permitió aplicar mis conocimientos y crecer profesionalmente.
       user:
-        name: 'Sarah Moriceau'
-        description: 'Brand Designer'
+        name: 'Diego Blanco'
+        description: 'Gestor de Proyectos TI'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/SarahM19'
-    - quote: Game-changer for our team. The focus tracking and smart alerts helped us reduce meeting interruptions by 40% and increased our sprint velocity.
+    - quote: Un verdadero puente entre el mundo académico y laboral. Gracias a PrimerPaso.com, conseguí mi primer empleo como desarrollador junior.
       user:
-        name: 'Sébastien Chopin'
-        description:  'Lead Software Engineer'
+        name: 'Erick Vargas'
+        description:  'Ingeniero de Software Senior'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/atinux'
-    - quote: Finally, a productivity tool that understands developers. The AI features helped me identify my peak coding hours and now I accomplish more in less time.
+    - quote: La plataforma me ayudó a encontrar una posición en marketing digital que se alinea perfectamente con mis estudios y aspiraciones profesionales.
       user:
-        name: 'Benjamin Canac'
-        description:  'Senior Frontend Developer'
+        name: 'Moises May'
+        description:  'Especialista en Marketing Digital'
         target: _blank
         avatar:
           src: 'https://ipx.nuxt.com/f_auto,s_192x192/gh_avatar/benjamincanac'
 cta:
-  title: Ready to build an amazing landing page?
-  description: Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today.
+  title: ¿Estás listo para dar tu [Primer]{.text-primary}[Paso]{.text-secondary}?
+  description: Empieza hoy mismo y transforma tu futuro profesional con PrimerPaso.com.
   links:
-    - label: Start building
-      to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt'
-      target: _blank
-      trailingIcon: i-lucide-arrow-right
-    - label: View on GitHub
-      to: 'https://github.com/nuxt-ui-templates/landing'
-      target: _blank
-      variant: subtle
-      icon: i-simple-icons-github
+      - label: Busca un empleo
+        icon: i-lucide-arrow-right
+        trailing: true
+        color: primary
+        to: https://ui.nuxt.com/docs/getting-started/installation/nuxt
+        target: _blank
+        size: xl
+        variant: outline
+  
+      - label: Publica un empleo
+        icon: i-lucide-arrow-right
+        trailing: true
+        color: secondary
+        to: https://ui.nuxt.com/docs/getting-started/installation/nuxt
+        target: _blank
+        size: xl
+        variant: outline
