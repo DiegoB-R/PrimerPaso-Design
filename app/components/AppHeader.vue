@@ -31,7 +31,6 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
       <NuxtLink to="/" class="text-2xl font-bold">
         PrimerPaso.com
       </NuxtLink>
-
     </template>
 
     <template #right>
@@ -54,8 +53,6 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
         variant="subtle"
         class="hidden lg:block"
       />
-
-  
     </template>
 
     <template #body>
@@ -65,8 +62,16 @@ nuxtApp.hooks.hookOnce('page:finish', () => {
         class="-mx-2.5"
       />
       <UButton
+        color="primary"
         class="mt-4"
-        label="Download App"
+        label="Student Portal"
+        variant="subtle"
+        block
+      />
+      <UButton
+        color="secondary"
+        class="mt-4"
+        label="Company Portal"
         variant="subtle"
         block
       />

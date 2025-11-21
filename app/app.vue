@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const colorMode = useColorMode()
 
 const color = computed(() => colorMode.value === 'dark' ? '#171717' : 'white')
