@@ -1,9 +1,12 @@
 // server/utils/db.ts
-import pkg from 'pg'
+import { usePostgres } from './postgres'
 
-const { Pool } = pkg
+export default eventHandler(async (event) => {
+  const sql = usePostgres()
 
-// Usa process.env.DATABASE_URL (o runtimeConfig si prefieres)
-export const pool = new Pool({
-  connectionString: process.env.NUXT_POSTGRES_URL
+  const products = await sql`SELECT * FROM products`
+
+  // Ensure the database connection is closed after the request is processed
+  event.waitUntil(sql.end())
+  return products
 })

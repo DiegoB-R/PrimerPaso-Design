@@ -61,7 +61,13 @@ async function onSubmit(payload: FormSubmitEvent<Schema>) {
       description: `Bienvenido ${payload.data.email}`
     })
 
-    console.log(res)
+    // Opcional: guardar el token
+    if (res.token) {
+      localStorage.setItem('token', res.token)
+    }
+
+    // 🔥 REDIRECCIÓN INMEDIATA
+    navigateTo('https://google.com', { external: true })
   } catch (err: any) {
     toast.add({
       color: 'red',

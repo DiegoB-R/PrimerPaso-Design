@@ -1,37 +1,16 @@
-import { pool } from '../../utils/db'
-import bcrypt from 'bcrypt'
-import { z } from 'zod'
-
-const schema = z.object({
-  email: z.string().email(),
-  password: z.string().min(8)
-}) 
+import { defineEventHandler, readBody, createError } from 'h3'
+import { usePostgres } from '../../utils/postgres'
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event)
-  const parsed = schema.safeParse(body)
-  if (!parsed.success) {
-    throw createError({ statusCode: 400, statusMessage: 'Invalid input' })
-  }
+  const { email, password } = await readBody(event)
+  const db = usePostgres()
 
-  const { email, password } = parsed.data
+  const users = await db`
+    SELECT * FROM users WHERE email = ${email}
+  `
+  const user = users[0]
 
-  const { rows } = await pool.query(
-    'SELECT * FROM users WHERE email=$1 LIMIT 1',
-    [email]
-  )
-
-  if (rows.length === 0) {
-    throw createError({
-      statusCode: 401,
-      statusMessage: 'Invalid credentials'
-    })
-  }
-
-  const user = rows[0]
-
-  const ok = await bcrypt.compare(password, user.password)
-  if (!ok) {
+  if (!user || user.password !== password) {
     throw createError({
       statusCode: 401,
       statusMessage: 'Invalid credentials'
@@ -40,9 +19,6 @@ export default defineEventHandler(async (event) => {
 
   return {
     ok: true,
-    user: {
-      id: user.id,
-      email: user.email
-    }
+    user: { id: user.id_user, email: user.email }
   }
 })
